@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01fea9b1597958478c98cbe47954d20, type: 3}
+  m_Name: NPC_1
+  m_EditorClassIdentifier: 
+  actor: {fileID: 6757095118490495387, guid: 44feeb05d62ab524bb3534e29b0adac9, type: 3}
+  speakerSprite: {fileID: 0}
+  sentence: 
+  dialogues:
+  - actorName: Roselia
+    profile: {fileID: -8091321643688609963, guid: 3e905fc78fccbf8448e03013acda50b1, type: 3}
+    sentence:
+      portuguese: "Ola, her\xF3i."
+      english: Hello, hero.
+      spanish: " Hola h\xE9roe"
+  - actorName: "Her\xF3i"
+    profile: {fileID: -4030792056451597264, guid: 9588d4d05dd2e9a43a05d85438b0b4d5, type: 3}
+    sentence:
+      portuguese: "Ol\xE1! Onde eu estou?"
+      english: 'Hello! Where I am? '
+      spanish: "\xA1Hola! \xBFDonde estoy?"
+  - actorName: Roselia
+    profile: {fileID: -8091321643688609963, guid: 3e905fc78fccbf8448e03013acda50b1, type: 3}
+    sentence:
+      portuguese: "Voc\xEA esta na vila do Tadeo!"
+      english: You are in Tadeo's village!
+      spanish: "\xA1Est\xE1s en el pueblo de Tadeo!"
