@@ -16,6 +16,12 @@ Desenvolver um jogo com o software [Unity](https://unity.com/pt), seguindo as et
 - Combate
 - Sons do jogo
 
+## Imagens do jogo:
+![Diálogo com NPC](imagens-demonstracao/Imagem-de-dialogo-demonstracao.png)
+
+![Plantações](imagens-demonstracao/plantando-demonstracao.png)
+
+
 ## Software:
 ### Unity
 Foi necessário baixar o [unityHub](https://unity.com/pt/download) na versão 2020.1.3
