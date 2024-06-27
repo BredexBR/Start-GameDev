@@ -18,9 +18,11 @@ Desenvolver um jogo com o software [Unity](https://unity.com/pt), seguindo as et
 
 ## Imagens do jogo:
 <h1 align="center" style="font-size: 20px;">Diálogo com NPC</h1>
+
 ![Diálogo com NPC](imagens-demonstracao/Imagem-de-dialogo-demonstracao.png)
 
 <h1 align="center" style="font-size: 20px;">Plantações</h1>
+
 ![Plantações](imagens-demonstracao/plantando-demonstracao.png)
 
 ## Software:
