@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; //Necessário para fazer troca de cena
 
 public class Player : MonoBehaviour
 {
@@ -90,6 +91,12 @@ public class Player : MonoBehaviour
             OnCutting();
             OnDig();
             OnWatering();
+        }
+
+        //Para ir a outra cena apertando a tecla "espaço"
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.LoadScene("teste");
         }
     }
 
