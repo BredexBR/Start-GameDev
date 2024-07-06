@@ -24,9 +24,11 @@ public class AnimationControl : MonoBehaviour
     public void Attack(){
         Collider2D hit = Physics2D.OverlapCircle(attackPoint.position, radius, playerLayer);
         if(hit != null)
+        {
             //detecta colisão com player
             //Debug.Log("bateu no player");
             player.OnHit();
+        }
         else{
 
         }
