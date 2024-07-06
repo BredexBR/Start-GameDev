@@ -94,10 +94,10 @@ public class Player : MonoBehaviour
         }
 
         //Para ir a outra cena apertando a tecla "espaço"
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SceneManager.LoadScene("teste");
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    SceneManager.LoadScene("teste");
+        //}
     }
 
     private void FixedUpdate() 
