@@ -98,7 +98,8 @@ public class PlayerAnim : MonoBehaviour
         Collider2D hit = Physics2D.OverlapCircle(attackPoint.position, radius, enemyLayer);
         if(hit != null)
         {
-            Debug.Log("bateu no esqueleto!");
+            //Debug.Log("bateu no esqueleto!");
+            hit.GetComponentInChildren<AnimationControl>().OnHit();
         }
     }
 
