@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class Skeleton : MonoBehaviour
 {
     [Header("Stats")]
+    public float radius;
+    public LayerMask layer;
     public float totalHealth;
     public float currentHealth;
     public Image healthBar;
@@ -18,6 +20,7 @@ public class Skeleton : MonoBehaviour
     [SerializeField] private AnimationControl animControl;
     
     private Player player;
+    private bool detectPlayer;
 
     // Start is called before the first frame update
     void Start()
@@ -30,8 +33,11 @@ public class Skeleton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!isDead)
+        // Caso queira que o skeleton persiga o jogador independente
+        // se estiver perto ou não, retire o trecho a seguir"&& detectPlayer"
+        if(!isDead && detectPlayer)
         {
+            agent.isStopped = false;
             agent.SetDestination(player.transform.position);
 
             if(Vector2.Distance(transform.position, player.transform.position) <= agent.stoppingDistance)
@@ -57,5 +63,32 @@ public class Skeleton : MonoBehaviour
                 transform.eulerAngles = new Vector2(0, 180);
             }
         }        
+    }
+    private void FixedUpdate()
+    {
+        DetectPlayer();
+    }
+
+    public void DetectPlayer()
+    {
+        Collider2D hit = Physics2D.OverlapCircle(transform.position, radius, layer);
+
+        if (hit != null)
+        {
+            //Enxergou o player
+            detectPlayer = true;            
+        }
+        else
+        {
+            //Não está vendo o player
+            detectPlayer = false;
+            animControl.PlayAnim(0);
+            agent.isStopped = true;
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position, radius);
     }
 }
