@@ -47,20 +47,28 @@ public class PlayerAnim : MonoBehaviour
     #region Movement
     void OnMove()
     {
-        if(player.direction.sqrMagnitude > 0){
-            if(player.isRolling){
-                anim.SetTrigger("isRoll");
-            }else
+        if(player.direction.sqrMagnitude > 0)
+        {
+            if(player.isRolling)
+            {
+                if(!anim.GetCurrentAnimatorStateInfo(0).IsName("roll"))
+                {
+                    anim.SetTrigger("isRoll");
+                }                
+            }
+            else
             {
                 anim.SetInteger("transition", 1);
             }
             
         }
-        else{
+        else
+        {
             anim.SetInteger("transition", 0);
         }
 
-        if(player.direction.x > 0){
+        if(player.direction.x > 0)
+        {
             transform.eulerAngles = new Vector2(0, 0);
         }
 
@@ -84,7 +92,7 @@ public class PlayerAnim : MonoBehaviour
     }
     void OnRun()
     {
-        if(player.isRunning){
+        if(player.isRunning && player.direction.sqrMagnitude > 0){
             anim.SetInteger("transition", 2);
         }
     }

@@ -32,6 +32,8 @@ public class DialogueControl : MonoBehaviour
     private string[] currentActorName;
     private Sprite[] actorSprite;
 
+    private Player player;
+
     public static DialogueControl instance;
 
     //awake é chamado antes de todos os Start() na hierarquia de execução de scripts
@@ -43,7 +45,7 @@ public class DialogueControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = FindObjectOfType<Player>();
     }
 
     // Update is called once per frame
@@ -82,6 +84,7 @@ public class DialogueControl : MonoBehaviour
                 dialogueObj.SetActive(false);
                 sentences = null;
                 isShowing = false;
+                player.isPaused = false;
             }
         }
     }
@@ -97,6 +100,7 @@ public class DialogueControl : MonoBehaviour
             actorNameText.text = currentActorName[index];
             StartCoroutine(TypeSentence());
             isShowing = true;
+            player.isPaused = true;
         }
     }
 }

@@ -17,7 +17,7 @@ MonoBehaviour:
   sentence: 
   dialogues:
   - actorName: Roselia
-    profile: {fileID: -8091321643688609963, guid: 3e905fc78fccbf8448e03013acda50b1, type: 3}
+    profile: {fileID: 21300000, guid: e040d27ca5a395a45ace8eb6303eeb36, type: 3}
     sentence:
       portuguese: "Ola, her\xF3i."
       english: Hello, hero.
@@ -25,11 +25,11 @@ MonoBehaviour:
   - actorName: "Her\xF3i"
     profile: {fileID: -4030792056451597264, guid: 9588d4d05dd2e9a43a05d85438b0b4d5, type: 3}
     sentence:
-      portuguese: "Ol\xE1! Onde eu estou?"
-      english: 'Hello! Where I am? '
-      spanish: "\xA1Hola! \xBFDonde estoy?"
+      portuguese: "Ol\xE1, her\xF3i? Onde eu estou?"
+      english: 'Hello, hero? Where I am? '
+      spanish: "\xA1Hola, h\xE9roe? \xBFDonde estoy?"
   - actorName: Roselia
-    profile: {fileID: -8091321643688609963, guid: 3e905fc78fccbf8448e03013acda50b1, type: 3}
+    profile: {fileID: 21300000, guid: e040d27ca5a395a45ace8eb6303eeb36, type: 3}
     sentence:
       portuguese: "Voc\xEA esta na vila do Tadeo!"
       english: You are in Tadeo's village!
